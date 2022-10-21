@@ -1,0 +1,4 @@
+.adaptable {
+  width: 3%;
+  height: auto;
+}

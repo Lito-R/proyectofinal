@@ -1,0 +1,29 @@
+{% extends 'todo/layout.html' %} {%block content %}
+
+<h3>Tareas</h3>
+<ul>
+   {% for tarea in tareas %}
+       <li>{{ tarea }}</li>
+       <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+      <button type="button" class="btn btn-danger"><a href="{% url 'eliminartarea' tarea.id %}">Eliminar</a></button>
+      <button type="button" class="btn btn-warning"><a href="{% url 'editartarea' tarea.id %}">Editar</a></button>
+   </div>
+   {% endfor %}    
+ </ul>
+
+
+ <h3>Actividades</h3>
+ <ul>
+   {% for actividad in actividades %}
+   <li>{{ actividad }}</li>
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+     <button type="button" class="btn btn-danger"><a href="{% url 'eliminaractividad' actividad.id %}">Eliminar</a></button>
+     <button type="button" class="btn btn-warning"><a href="{% url 'editaractividad' actividad.id %}">Editar</a></button>
+  </div>
+   {% endfor %}    
+</ul>
+ 
+ {% endblock %}
+
+
+ 
